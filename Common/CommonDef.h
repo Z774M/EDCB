@@ -58,7 +58,7 @@
 #define ADD_RESERVE_NO_EPG		0x10	//EPGなしで延長済み
 #define ADD_RESERVE_UNKNOWN_END	0x20	//終了未定状態
 
-//Viewアプリ（EpgDataCap_Bon）のステータス
+//Viewアプリ（Eden）のステータス
 #define VIEW_APP_ST_NORMAL				0 //通常状態
 #define VIEW_APP_ST_ERR_BON				1 //BonDriverの初期化に失敗
 #define VIEW_APP_ST_REC					2 //録画状態

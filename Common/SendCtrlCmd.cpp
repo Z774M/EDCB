@@ -1444,7 +1444,7 @@ DWORD CSendCtrlCmd::SendGetChgChTVTest(
 	return ret;
 }
 
-//ネットワークモードのEpgDataCap_Bonのチャンネルを切り替え
+//ネットワークモードのEdenのチャンネルを切り替え
 //戻り値：
 // エラーコード
 //引数：
@@ -1479,7 +1479,7 @@ DWORD CSendCtrlCmd::SendNwTVSetCh(
 	return ret;
 }
 
-//ネットワークモードで起動中のEpgDataCap_Bonを終了
+//ネットワークモードで起動中のEdenを終了
 //戻り値：
 // エラーコード
 //引数：
@@ -2630,7 +2630,7 @@ DWORD CSendCtrlCmd::SendGUINotifyInfo2(NOTIFY_SRV_INFO* val)
 	return ret;
 }
 
-//Viewアプリ（EpgDataCap_Bon.exe）を起動
+//Viewアプリ（Eden.exe）を起動
 //戻り値：
 // エラーコード
 //引数：

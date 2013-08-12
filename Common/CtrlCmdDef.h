@@ -90,8 +90,8 @@
 #define CMD2_EPG_SRV_ENUM_PLUGIN			1061 //PlugInファイルの一覧を取得する（1:ReName、2:Write）
 #define CMD2_EPG_SRV_GET_CHG_CH_TVTEST		1062 //TVTestのチャンネル切り替え用の情報を取得する
 
-#define CMD2_EPG_SRV_NWTV_SET_CH			1070 //ネットワークモードのEpgDataCap_Bonのチャンネルを切り替え
-#define CMD2_EPG_SRV_NWTV_CLOSE				1071 //ネットワークモードで起動中のEpgDataCap_Bonを終了
+#define CMD2_EPG_SRV_NWTV_SET_CH			1070 //ネットワークモードのEdenのチャンネルを切り替え
+#define CMD2_EPG_SRV_NWTV_CLOSE				1071 //ネットワークモードで起動中のEdenを終了
 #define CMD2_EPG_SRV_NWTV_MODE				1072 //ネットワークモードで起動するときのモード（1:UDP 2:TCP 3:UDP+TCP）
 
 #define CMD2_EPG_SRV_NWPLAY_OPEN			1080 //ストリーム配信用ファイルを開く
@@ -107,7 +107,7 @@
 #define CMD2_TIMER_GUI_SHOW_DLG				101 //ダイアログを前面に表示
 #define CMD2_TIMER_GUI_UPDATE_RESERVE		102 //予約一覧の情報が更新された
 #define CMD2_TIMER_GUI_UPDATE_EPGDATA		103 //EPGデータの再読み込みが完了した
-#define CMD2_TIMER_GUI_VIEW_EXECUTE			110 //Viewアプリ（EpgDataCap_Bon.exe）を起動
+#define CMD2_TIMER_GUI_VIEW_EXECUTE			110 //Viewアプリ（Eden.exe）を起動
 #define CMD2_TIMER_GUI_QUERY_SUSPEND		120 //スタンバイ、休止、シャットダウンに入っていいかの確認をユーザーに行う（入っていいならCMD_EPG_SRV_SUSPENDを送る）
 #define CMD2_TIMER_GUI_QUERY_REBOOT			121 //PC再起動に入っていいかの確認をユーザーに行う（入っていいならCMD_EPG_SRV_REBOOTを送る）
 #define CMD2_TIMER_GUI_SRV_STATUS_CHG		130 //サーバーのステータス変更通知（1:通常、2:EPGデータ取得開始、3:予約録画開始）
@@ -115,7 +115,7 @@
 //バージョン情報追加対応版
 #define CMD2_TIMER_GUI_SRV_STATUS_NOTIFY2	1130 //サーバーの情報変更通知
 
-//Viewアプリ（EpgDataCap_Bon.exe）用
+//Viewアプリ（Eden.exe）用
 #define CMD2_VIEW_APP_SET_BONDRIVER			201 //BonDriverの切り替え
 #define CMD2_VIEW_APP_GET_BONDRIVER			202 //使用中のBonDriverのファイル名を取得
 #define CMD2_VIEW_APP_SET_CH				205 //SpaceとCh or OriginalNetworkID、TSID、ServieIDでチャンネル切り替え

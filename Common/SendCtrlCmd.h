@@ -321,7 +321,7 @@ public:
 		TVTEST_CH_CHG_INFO* resVal
 		);
 
-	//ネットワークモードのEpgDataCap_Bonのチャンネルを切り替え
+	//ネットワークモードのEdenのチャンネルを切り替え
 	//戻り値：
 	// エラーコード
 	//引数：
@@ -330,7 +330,7 @@ public:
 		SET_CH_INFO* val
 		);
 
-	//ネットワークモードで起動中のEpgDataCap_Bonを終了
+	//ネットワークモードで起動中のEdenを終了
 	//戻り値：
 	// エラーコード
 	//引数：
@@ -584,7 +584,7 @@ public:
 	// val				[IN]通知情報
 	DWORD SendGUINotifyInfo2(NOTIFY_SRV_INFO* val);
 
-//Viewアプリ（EpgDataCap_Bon.exe）を起動
+//Viewアプリ（Eden.exe）を起動
 	//戻り値：
 	// エラーコード
 	//引数：
@@ -620,7 +620,7 @@ public:
 		);
 
 
-//Viewアプリ（EpgDataCap_Bon.exe）用
+//Viewアプリ（Eden.exe）用
 
 	//BonDriverの切り替え
 	//戻り値：
