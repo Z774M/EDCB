@@ -1,7 +1,6 @@
 EDEN
-EpgData English (based on EDCB)
 ==============
-**BonDriver based multifunctional EPG software**
+**EpgData English (based on EDCB)**
 
 Documents are stored in the 'Document' directory.  
 Configuration files are stored in the 'ini' directory.
