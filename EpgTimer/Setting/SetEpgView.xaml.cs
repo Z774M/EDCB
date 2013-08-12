@@ -401,21 +401,21 @@ namespace EpgTimer.Setting
                         contentCount++;
                     }
                     IniFileHandler.WritePrivateProfileString("HTTP_CUST" + custCount.ToString(), "ViewMode", info.ViewMode.ToString(), SettingPath.TimerSrvIniPath);
-                    if (info.NeedTimeOnlyBasic == true)
+                    //if (info.NeedTimeOnlyBasic == true)
+                    //{
+                    //    IniFileHandler.WritePrivateProfileString("HTTP_CUST" + custCount.ToString(), "NeedTimeOnlyBasic", "1", SettingPath.TimerSrvIniPath);
+                    //}
+                    //else
+                    //{
+                    //    IniFileHandler.WritePrivateProfileString("HTTP_CUST" + custCount.ToString(), "NeedTimeOnlyBasic", "0", SettingPath.TimerSrvIniPath);
+                    //}
+                    if (info.NeedTimeOnly == true)
                     {
-                        IniFileHandler.WritePrivateProfileString("HTTP_CUST" + custCount.ToString(), "NeedTimeOnlyBasic", "1", SettingPath.TimerSrvIniPath);
+                        IniFileHandler.WritePrivateProfileString("HTTP_CUST" + custCount.ToString(), "NeedTimeOnly", "1", SettingPath.TimerSrvIniPath);
                     }
                     else
                     {
-                        IniFileHandler.WritePrivateProfileString("HTTP_CUST" + custCount.ToString(), "NeedTimeOnlyBasic", "0", SettingPath.TimerSrvIniPath);
-                    }
-                    if (info.NeedTimeOnlyWeek == true)
-                    {
-                        IniFileHandler.WritePrivateProfileString("HTTP_CUST" + custCount.ToString(), "NeedTimeOnlyWeek", "1", SettingPath.TimerSrvIniPath);
-                    }
-                    else
-                    {
-                        IniFileHandler.WritePrivateProfileString("HTTP_CUST" + custCount.ToString(), "NeedTimeOnlyWeek", "0", SettingPath.TimerSrvIniPath);
+                        IniFileHandler.WritePrivateProfileString("HTTP_CUST" + custCount.ToString(), "NeedTimeOnly", "0", SettingPath.TimerSrvIniPath);
                     }
                     if (info.SearchMode == true)
                     {

@@ -126,21 +126,21 @@ namespace EpgTimer
                 radioButton_list.IsChecked = false;
             }
 
-            if (setInfo.NeedTimeOnlyBasic == true)
+            //if (setInfo.NeedTimeOnlyBasic == true)
+            //{
+            //    checkBox_noTimeView_rate.IsChecked = true;
+            //}
+            //else
+            //{
+            //    checkBox_noTimeView_rate.IsChecked = false;
+            //}
+            if (setInfo.NeedTimeOnly == true)
             {
-                checkBox_noTimeView_rate.IsChecked = true;
+                checkBox_noTimeView.IsChecked = true;
             }
             else
             {
-                checkBox_noTimeView_rate.IsChecked = false;
-            }
-            if (setInfo.NeedTimeOnlyWeek == true)
-            {
-                checkBox_noTimeView_week.IsChecked = true;
-            }
-            else
-            {
-                checkBox_noTimeView_week.IsChecked = false;
+                checkBox_noTimeView.IsChecked = false;
             }
             comboBox_timeH_week.SelectedIndex = setInfo.StartTimeWeek;
 
@@ -193,21 +193,21 @@ namespace EpgTimer
             {
                 info.ViewMode = 0;
             }
-            if (checkBox_noTimeView_rate.IsChecked == true)
+            //if (checkBox_noTimeView_rate.IsChecked == true)
+            //{
+            //    info.NeedTimeOnlyBasic = true;
+            //}
+            //else
+            //{
+            //    info.NeedTimeOnlyBasic = false;
+            //}
+            if (checkBox_noTimeView.IsChecked == true)
             {
-                info.NeedTimeOnlyBasic = true;
-            }
-            else
-            {
-                info.NeedTimeOnlyBasic = false;
-            }
-            if (checkBox_noTimeView_week.IsChecked == true)
-            {
-                info.NeedTimeOnlyWeek = true;
+                info.NeedTimeOnly = true;
             } 
             else
             {
-                info.NeedTimeOnlyWeek = false;
+                info.NeedTimeOnly = false;
             }
             info.StartTimeWeek = comboBox_timeH_week.SelectedIndex;
 

@@ -14,18 +14,18 @@
         <TabControl Name="tabControl">
             <TabItem Header="Style" Name="tabItem_mode">
                 <Grid>
-                    <Label Content="Tab Name" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" x:Name="label_tabName" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" />
-                    <TextBox Height="24" HorizontalAlignment="Left" Margin="80,10,0,0" Name="textBox_tabName" VerticalAlignment="Top" Width="200" />
-                    <Label Content="View Style" Height="28" HorizontalAlignment="Left" Margin="10,44,0,0" x:Name="label_viewStyle" VerticalAlignment="Top" />
-                    <RadioButton Content="Default" Height="16" HorizontalAlignment="Left" Margin="30,78,0,0" Name="radioButton_rate" VerticalAlignment="Top" />
-                    <CheckBox Content="Only display when program is exist" Height="16" HorizontalAlignment="Left" Margin="60,102,0,0" Name="checkBox_noTimeView_rate" VerticalAlignment="Top" />
-                    <RadioButton Content="Week" Height="16" HorizontalAlignment="Left" Margin="30,122,0,0" Name="radioButton_week" VerticalAlignment="Top" />
-                    <CheckBox Content="Only display when program is exist" Height="16" HorizontalAlignment="Left" Margin="60,146,0,0" Name="checkBox_noTimeView_week" VerticalAlignment="Top" />
-                    <Label Content="Time table start at:" Height="24" HorizontalAlignment="Left" Margin="60,166,0,0" x:Name="label_timeTableStartAt" VerticalAlignment="Top" />
-                    <ComboBox HorizontalAlignment="Left" Margin="172,166,0,0" Name="comboBox_timeH_week" VerticalAlignment="Top" ItemsSource="{Binding}" />
-                    <RadioButton Content="List" Height="16" HorizontalAlignment="Left" Margin="30,196,0,0" Name="radioButton_list" VerticalAlignment="Top" />
-                    <Label x:Name="label_filterDuration" Content="Only display program duration longer than (min):" Height="28" HorizontalAlignment="Left" Margin="30,240,0,0" VerticalAlignment="Top" />
-                    <TextBox HorizontalAlignment="Left" Margin="302,244,0,0" Name="textBox_filterDuration" VerticalAlignment="Top" Width="40" TextAlignment="Right" />
+                    <Label Content="Tab Name" Height="28" HorizontalAlignment="Left" Margin="30,20,0,0" x:Name="label_tabName" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" />
+                    <TextBox Height="24" HorizontalAlignment="Left" Margin="106,20,0,0" Name="textBox_tabName" VerticalAlignment="Top" Width="200" />
+                    <Label Content="View Style" Height="28" Margin="30,60,0,0" x:Name="label_viewStyle" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                    <RadioButton Content="Default" Height="16" Margin="106,66,0,0" Name="radioButton_rate" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                    <!--<CheckBox Content="Only display when program is exist" Height="16" HorizontalAlignment="Left" Margin="60,102,0,0" Name="checkBox_noTimeView_rate" VerticalAlignment="Top" />-->
+                    <RadioButton Content="Week" Height="16" HorizontalAlignment="Left" Margin="182,66,0,0" Name="radioButton_week" VerticalAlignment="Top" />
+                    <RadioButton Content="List" Height="16" HorizontalAlignment="Left" Margin="250,66,0,0" Name="radioButton_list" VerticalAlignment="Top" />
+                    <Label Content="Time table start at:" Height="24" HorizontalAlignment="Left" Margin="106,92,0,0" x:Name="label_timeTableStartAt" VerticalAlignment="Top" />
+                    <ComboBox HorizontalAlignment="Left" Margin="218,94,0,0" Name="comboBox_timeH_week" VerticalAlignment="Top" ItemsSource="{Binding}" />
+                    <CheckBox Content="Only display when program is exist" Height="28" HorizontalAlignment="Left" Margin="106,130,0,0" Name="checkBox_noTimeView" VerticalAlignment="Top" />
+                    <Label x:Name="label_filterDuration" Content="Display program duration longer than (min):" Height="28" HorizontalAlignment="Left" Margin="106,154,0,0" VerticalAlignment="Top" />
+                    <TextBox HorizontalAlignment="Left" Margin="360,156,0,0" Name="textBox_filterDuration" VerticalAlignment="Top" Width="40" TextAlignment="Right" />
 
                 </Grid>
             </TabItem>

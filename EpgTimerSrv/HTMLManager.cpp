@@ -1655,8 +1655,8 @@ BOOL CHTMLManager::CreateCustEpgPage(CEpgDBManager* epgDB, vector<RESERVE_DATA*>
 	vector<LONGLONG> useServiceList;
 	map<WORD,WORD> contentMap;
 	int viewMode = 0;
-	int needTimeOnlyBasic = 0;
-	int needTimeOnlyWeek = 0;
+	//int needTimeOnlyBasic = 0;
+	int needTimeOnly = 0;
 	int viewCount = 0;
 	//タブ情報
 	string tabPageLink;
@@ -1686,8 +1686,8 @@ BOOL CHTMLManager::CreateCustEpgPage(CEpgDBManager* epgDB, vector<RESERVE_DATA*>
 
 		if( i== tab ){
 			viewMode = GetPrivateProfileInt(key.c_str(), L"ViewMode", 0, iniPath.c_str());
-			needTimeOnlyBasic = GetPrivateProfileInt(key.c_str(), L"NeedTimeOnlyBasic", 0, iniPath.c_str());
-			needTimeOnlyWeek = GetPrivateProfileInt(key.c_str(), L"NeedTimeOnlyWeek", 0, iniPath.c_str());
+			//needTimeOnlyBasic = GetPrivateProfileInt(key.c_str(), L"NeedTimeOnlyBasic", 0, iniPath.c_str());
+			needTimeOnly = GetPrivateProfileInt(key.c_str(), L"NeedTimeOnly", 0, iniPath.c_str());
 			//表示サービス
 			viewCount = GetPrivateProfileInt(key.c_str(), L"ViewServiceCount", 0, iniPath.c_str());
 			for( int j=0; j<viewCount; j++ ){
@@ -1994,7 +1994,7 @@ BOOL CHTMLManager::CreateCustEpgPage(CEpgDBManager* epgDB, vector<RESERVE_DATA*>
 			dateList.push_back(buff);
 		}
 
-		if( needTimeOnlyWeek == 0){
+		if( needTimeOnly == 0){
 			//空きでも時間必要
 			for( LONGLONG jt= chkStartTime; jt<=chkEndTime;jt+=60*60*I64_1SEC){
 				if( jt != chkEndTime){
@@ -2170,20 +2170,20 @@ BOOL CHTMLManager::CreateCustEpgPage(CEpgDBManager* epgDB, vector<RESERVE_DATA*>
 		LONGLONG chkStartTime = ConvertI64Time(chkTime) + (date*24*60*60*I64_1SEC);
 		LONGLONG chkEndTime = chkStartTime + 24*60*60*I64_1SEC;
 
-		if( needTimeOnlyBasic == 0){
-			//空きでも時間必要
-			for( LONGLONG jt= chkStartTime; jt<=chkEndTime;jt+=60*60*I64_1SEC){
-				if( jt != chkEndTime){
-					TIME_TABLE item;
-					ConvertSystemTime(jt, &item.timeInfo);
-					for( size_t j=0; j<useServiceList.size(); j++ ){
-						EVENT_TABLE inItem;
-						item.eventTableList.push_back(inItem);
-					}
-					timeMap.insert(pair<LONGLONG, TIME_TABLE>(jt, item));
-				}
-			}
-		}
+		//if( needTimeOnlyBasic == 0){
+		//	//空きでも時間必要
+		//	for( LONGLONG jt= chkStartTime; jt<=chkEndTime;jt+=60*60*I64_1SEC){
+		//		if( jt != chkEndTime){
+		//			TIME_TABLE item;
+		//			ConvertSystemTime(jt, &item.timeInfo);
+		//			for( size_t j=0; j<useServiceList.size(); j++ ){
+		//				EVENT_TABLE inItem;
+		//				item.eventTableList.push_back(inItem);
+		//			}
+		//			timeMap.insert(pair<LONGLONG, TIME_TABLE>(jt, item));
+		//		}
+		//	}
+		//}
 
 		for( size_t i=0; i<useServiceList.size(); i++ ){
 			//必要な物抽出

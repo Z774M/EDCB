@@ -1211,7 +1211,7 @@ namespace EpgTimer
                     this.viewCustContentKindList.Add(val, val);
                 }
             }
-            this.viewCustNeedTimeOnly = setInfo.NeedTimeOnlyWeek;
+            this.viewCustNeedTimeOnly = setInfo.NeedTimeOnly;
 
             ClearInfo();
             if (ReloadEpgData() == true)

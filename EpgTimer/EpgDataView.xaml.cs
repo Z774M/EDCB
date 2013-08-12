@@ -180,19 +180,19 @@ namespace EpgTimer
                     CustomEpgTabInfo setInfoBS = new CustomEpgTabInfo();
                     setInfoBS.ViewMode = 0;
                     setInfoBS.TabName = "BS";
-                    setInfoBS.NeedTimeOnlyBasic = false;
+                    //setInfoBS.NeedTimeOnlyBasic = false;
                     CustomEpgTabInfo setInfoCS = new CustomEpgTabInfo();
                     setInfoCS.ViewMode = 0;
                     setInfoCS.TabName = "CS";
-                    setInfoCS.NeedTimeOnlyBasic = false;
+                    //setInfoCS.NeedTimeOnlyBasic = false;
                     CustomEpgTabInfo setInfoTere = new CustomEpgTabInfo();
                     setInfoTere.ViewMode = 0;
                     setInfoTere.TabName = "地デジ";
-                    setInfoTere.NeedTimeOnlyBasic = false;
+                    //setInfoTere.NeedTimeOnlyBasic = false;
                     CustomEpgTabInfo setInfoOther = new CustomEpgTabInfo();
                     setInfoOther.ViewMode = 0;
                     setInfoOther.TabName = "その他";
-                    setInfoOther.NeedTimeOnlyBasic = false;
+                    //setInfoOther.NeedTimeOnlyBasic = false;
 
 
                     //デフォルト表示

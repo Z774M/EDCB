@@ -1219,7 +1219,7 @@ namespace EpgTimer
                     this.viewCustContentKindList.Add(val, val);
                 }
             }
-            this.viewCustNeedTimeOnly = setInfo.NeedTimeOnlyBasic;
+            this.viewCustNeedTimeOnly = setInfo.NeedTimeOnly;
 
             ClearInfo();
             if (ReloadEpgData() == true)

@@ -15,8 +15,8 @@ namespace EpgTimer
             ViewServiceList = new List<UInt64>();
             ViewContentKindList = new List<UInt16>();
             ViewMode = 0;
-            NeedTimeOnlyBasic = false;
-            NeedTimeOnlyWeek = false;
+            //NeedTimeOnlyBasic = false;
+            NeedTimeOnly = false;
             StartTimeWeek = 4;
             SearchMode = false;
             SearchKey = new EpgSearchKeyInfo();
@@ -32,12 +32,12 @@ namespace EpgTimer
             get;
             set;
         }
-        public bool NeedTimeOnlyBasic
-        {
-            get;
-            set;
-        }
-        public bool NeedTimeOnlyWeek
+        //public bool NeedTimeOnlyBasic
+        //{
+        //    get;
+        //    set;
+        //}
+        public bool NeedTimeOnly
         {
             get;
             set;
@@ -76,8 +76,8 @@ namespace EpgTimer
         {
             dest.TabName = TabName;
             dest.ViewMode = ViewMode;
-            dest.NeedTimeOnlyBasic = NeedTimeOnlyBasic;
-            dest.NeedTimeOnlyWeek = NeedTimeOnlyWeek;
+            //dest.NeedTimeOnlyBasic = NeedTimeOnlyBasic;
+            dest.NeedTimeOnly = NeedTimeOnly;
             dest.StartTimeWeek = StartTimeWeek;
             dest.ViewServiceList = ViewServiceList.ToList();
             dest.ViewContentKindList = ViewContentKindList.ToList();
