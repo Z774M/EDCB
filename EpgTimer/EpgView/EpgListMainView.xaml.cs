@@ -471,6 +471,11 @@ namespace EpgTimer
                                     //開始未定は除外
                                     continue;
                                 }
+                                if (eventInfo.durationSec / 60 <= setViewInfo.FilterDuration)
+                                {
+                                    //rejection program duration shorter than user defined
+                                    continue;
+                                }
                                 //ジャンル絞り込み
                                 if (this.viewCustContentKindList.Count > 0)
                                 {

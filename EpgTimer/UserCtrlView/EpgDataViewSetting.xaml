@@ -12,21 +12,24 @@
     </UserControl.Resources>
     <Grid>
         <TabControl Name="tabControl">
-            <TabItem Header="表示設定" Name="tabItem_mode">
+            <TabItem Header="Style" Name="tabItem_mode">
                 <Grid>
-                    <RadioButton Content="標準モード" Height="16" HorizontalAlignment="Left" Margin="27,74,0,0" Name="radioButton_rate" VerticalAlignment="Top" />
-                    <RadioButton Content="1週間モード" Height="16" HorizontalAlignment="Left" Margin="27,118,0,0" Name="radioButton_week" VerticalAlignment="Top" />
-                    <RadioButton Content="リスト表示モード" Height="16" HorizontalAlignment="Left" Margin="27,196,0,0" Name="radioButton_list" VerticalAlignment="Top" />
-                    <CheckBox Content="番組のない時間帯は表示しない" Height="16" HorizontalAlignment="Left" Margin="52,96,0,0" Name="checkBox_noTimeView_rate" VerticalAlignment="Top" />
-                    <CheckBox Content="番組のない時間帯は表示しない" Height="16" HorizontalAlignment="Left" Margin="52,140,0,0" Name="checkBox_noTimeView_week" VerticalAlignment="Top" />
-                    <Label Content="表示開始時間" Height="28" HorizontalAlignment="Left" Margin="52,162,0,0" Name="label1" VerticalAlignment="Top" />
-                    <ComboBox Height="24" HorizontalAlignment="Left" Margin="140,162,0,0" Name="comboBox_timeH_week" VerticalAlignment="Top" Width="51" ItemsSource="{Binding}" />
-                    <Label Content="タブ名" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label2" VerticalAlignment="Top" />
-                    <TextBox Height="24" HorizontalAlignment="Left" Margin="58,8,0,0" Name="textBox_tabName" VerticalAlignment="Top" Width="200" />
-                    <Label Content="表示モード" Height="28" HorizontalAlignment="Left" Margin="6,40,0,0" Name="label3" VerticalAlignment="Top" />
+                    <Label Content="Tab Name" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" x:Name="label_tabName" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" />
+                    <TextBox Height="24" HorizontalAlignment="Left" Margin="80,10,0,0" Name="textBox_tabName" VerticalAlignment="Top" Width="200" />
+                    <Label Content="View Style" Height="28" HorizontalAlignment="Left" Margin="10,44,0,0" x:Name="label_viewStyle" VerticalAlignment="Top" />
+                    <RadioButton Content="Default" Height="16" HorizontalAlignment="Left" Margin="30,78,0,0" Name="radioButton_rate" VerticalAlignment="Top" />
+                    <CheckBox Content="Only display when program is exist" Height="16" HorizontalAlignment="Left" Margin="60,102,0,0" Name="checkBox_noTimeView_rate" VerticalAlignment="Top" />
+                    <RadioButton Content="Week" Height="16" HorizontalAlignment="Left" Margin="30,122,0,0" Name="radioButton_week" VerticalAlignment="Top" />
+                    <CheckBox Content="Only display when program is exist" Height="16" HorizontalAlignment="Left" Margin="60,146,0,0" Name="checkBox_noTimeView_week" VerticalAlignment="Top" />
+                    <Label Content="Time table start at:" Height="24" HorizontalAlignment="Left" Margin="60,166,0,0" x:Name="label_timeTableStartAt" VerticalAlignment="Top" />
+                    <ComboBox HorizontalAlignment="Left" Margin="172,166,0,0" Name="comboBox_timeH_week" VerticalAlignment="Top" ItemsSource="{Binding}" />
+                    <RadioButton Content="List" Height="16" HorizontalAlignment="Left" Margin="30,196,0,0" Name="radioButton_list" VerticalAlignment="Top" />
+                    <Label x:Name="label_filterDuration" Content="Only display program duration longer than (min):" Height="28" HorizontalAlignment="Left" Margin="30,240,0,0" VerticalAlignment="Top" />
+                    <TextBox HorizontalAlignment="Left" Margin="302,244,0,0" Name="textBox_filterDuration" VerticalAlignment="Top" Width="40" TextAlignment="Right" />
+
                 </Grid>
             </TabItem>
-            <TabItem Header="表示条件" Name="tabItem_key">
+            <TabItem Header="Filtering" Name="tabItem_key">
                 <Grid>
                     <Button Content="検索条件" Height="23" HorizontalAlignment="Left" Margin="184,6,0,0" Name="button_searchKey" VerticalAlignment="Top" Width="75" Click="button_searchKey_Click" Style="{StaticResource ButtonStyle1}" />
                     <CheckBox Content="検索による絞り込みを行う" Height="16" HorizontalAlignment="Left" Margin="6,9,0,0" Name="checkBox_searchMode" VerticalAlignment="Top" />
